@@ -1,7 +1,8 @@
 :root {
   --accent-color: hsla(216, 100%, 50%, 1);
   --btn-color: hsl(0, 0%, 100%);
-  --text-color: hsl(0, 0%, 8%);
+  --text-color: #141414;
+  --pale-white: hsl(210, 50%, 98%);
 }
 
 * {
@@ -11,7 +12,7 @@
 }
 
 body {
-  color: #1e1e1e;
+  color: var(--text-color);
 }
 
 nav {
@@ -189,7 +190,7 @@ h1 {
   height: 93px;
 }
 
-.group-3 img{
+.group-3 > img{
   position: absolute;
   width: 100%;
 }
@@ -207,3 +208,75 @@ h1 {
 
 /* main cointainer */
 
+.container{
+  width: 100vw;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 60px 140px;
+  position: relative;
+  top: 85px;
+  z-index: -1;
+}
+
+.container:first-of-type{
+  background-color: var(--pale-white);
+}
+
+.container > h2{
+  font-size: 40px;
+  line-height: 48px;
+}
+
+/* stats section */
+
+.stats-container{
+  display: inherit;
+}
+
+.stats{
+  display: inherit;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 4px;
+  /* width: 291px; */
+  height: 100px;
+  gap: 30px;
+}
+
+.stats > div > h4{
+  font-size: 32px;
+  line-height: 40px;
+}
+
+.stats > div > p{
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.stats > div{
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.stats > #users{
+  width: 88px;
+  height: 68px;
+}
+
+.stats > #links-created{
+  width: 113px;
+  height: 100px;
+}
+
+.stats > #clicked{
+  width: 133px;
+  height: 100px;
+}
+
+.stats > #integrations{
+  width: 113px;
+  height: 68px;
+}
