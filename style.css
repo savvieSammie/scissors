@@ -3,16 +3,19 @@
   --btn-color: hsl(0, 0%, 100%);
   --text-color: #141414;
   --pale-white: hsl(210, 50%, 98%);
+  --pure-white: hsl(0, 0%, 100%);
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* border: 1px solid red; */
 }
 
 body {
   color: var(--text-color);
+  overflow-x: hidden;
 }
 
 nav {
@@ -175,14 +178,14 @@ h1 {
   align-self: center;
 }
 
-.group-2 > img{
+.group-2 > img {
   position: absolute;
   top: -15px;
   z-index: -1;
 }
 
 /* group 3 */
-.group-3{
+.group-3 {
   position: relative;
   top: 100px;
   left: 0;
@@ -190,12 +193,12 @@ h1 {
   height: 93px;
 }
 
-.group-3 > img{
+.group-3 > img {
   position: absolute;
   width: 100%;
 }
 
-#ellipse{
+#ellipse {
   width: 50%;
   height: 49px;
   margin: 20px auto 24px;
@@ -208,7 +211,7 @@ h1 {
 
 /* main cointainer */
 
-.container{
+.container > div {
   width: 100vw;
   height: 220px;
   display: flex;
@@ -220,22 +223,22 @@ h1 {
   z-index: -1;
 }
 
-.container:first-of-type{
+.container > div:first-of-type {
   background-color: var(--pale-white);
 }
 
-.container > h2{
+.container > div > h2 {
   font-size: 40px;
   line-height: 48px;
 }
 
 /* stats section */
 
-.stats-container{
+.stats-container {
   display: inherit;
 }
 
-.stats{
+.stats {
   display: inherit;
   align-items: flex-start;
   justify-content: center;
@@ -245,38 +248,295 @@ h1 {
   gap: 30px;
 }
 
-.stats > div > h4{
+.stats > div > h4 {
   font-size: 32px;
   line-height: 40px;
 }
 
-.stats > div > p{
+.stats > div > p {
   font-size: 16px;
   line-height: 24px;
 }
 
-.stats > div{
+.stats > div {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
 }
 
-.stats > #users{
+.stats > #users {
   width: 88px;
   height: 68px;
 }
 
-.stats > #links-created{
+.stats > #links-created {
   width: 113px;
   height: 100px;
 }
 
-.stats > #clicked{
+.stats > #clicked {
   width: 133px;
   height: 100px;
 }
 
-.stats > #integrations{
+.stats > #integrations {
   width: 113px;
   height: 68px;
 }
+
+/* choose us section */
+.container > div:last-of-type {
+  overflow: hidden;
+  max-width: 72vw;
+  height: fit-content;
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  top: 180px;
+  left: 50%;
+  padding: 0;
+  transform: translateX(-50%);
+}
+
+.choose-us {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  width: 300px;
+  height: 256px;
+}
+
+.choose-us > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 48px;
+  margin-bottom: 24px;
+}
+
+.choose-us > div > h2 {
+  width: 250px;
+  height: 32px;
+  margin: 8px 16px 0;
+  font-size: 25px;
+  line-height: 32px;
+}
+
+.choose-us > p {
+  width: 275px;
+  height: 192px;
+  font-size: 14px;
+  line-height: 24px;
+  margin-left: 28.1px;
+}
+
+.services {
+  margin-left: 86px;
+}
+
+.services-group-1,
+.services-group-2 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 500px;
+  height: 220px;
+  gap: 10px;
+}
+
+.services-group-1 {
+  margin-bottom: 64px;
+}
+
+.service {
+  width: 320px;
+  height: 220px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.service > img {
+  margin-bottom: 40px;
+}
+
+.service > div > h3 {
+  margin-bottom: 16px;
+}
+
+.service > div > p {
+  width: 240px;
+  font-size: 14px;
+}
+
+/* pricing */
+
+.pricing {
+  width: 100vw;
+  height: 1073px;
+  position: relative;
+  top: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.pricing-header {
+  width: 560px;
+  height: 108px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: center;
+  margin-top: 42px;
+}
+
+.pricing-header > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.pricing-header > div > h2 {
+  width: fit-content;
+  font-size: 40px;
+  line-height: 48px;
+  margin: 0 0 8px 16px;
+}
+
+.pricing-header > div > p {
+  width: 500px;
+  font-size: 16px;
+}
+
+/* pricing body */
+.pricing-body {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 627px;
+  margin-top: 68px;
+}
+
+.pricing-plan {
+  position: absolute;
+  width: 359px;
+  height: 455px;
+  border: 0.4px solid var(--accent-color);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  background: var(--pure-white);
+}
+
+.pricing-plan:first-of-type{
+  left: 0;
+}
+
+.pricing-plan:last-of-type{
+  right: 0;
+}
+
+.pricing-plan > p,
+.pricing-info {
+  position: absolute;
+  left: 77px;
+}
+
+.pricing-plan:last-of-type > p,
+.pricing-plan:last-of-type > .pricing-info{
+  left: 97px;
+}
+
+.pricing-plan > p {
+  height: 32px;
+  top: 24px;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.recommended {
+  position: absolute;
+  width: 410px;
+  height: 100%;
+  color: var(--pure-white);
+  background: linear-gradient(180deg, #1e3448 99.99%, rgba(30, 52, 72, 0) 100%);
+  filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.05));
+  z-index: 1;
+}
+
+.pricing-info {
+  top: 90px;
+  height: 320px;
+}
+
+.pricing-info > div {
+  width: 194px;
+  height: 88px;
+  /* margin-bottom: 16px; */
+}
+
+.pricing-info > div > h4 {
+  font-size: 40px;
+  line-height: 48px;
+  margin-bottom: 8px;
+}
+
+.pricing-info > div > p {
+  width: 227px;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.benefits {
+  width: 196px;
+  height: 216px;
+  margin-top: 16px;
+  list-style-type: none;
+  list-style-position: inside;
+}
+
+.benefits > li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 24px;
+}
+
+.benefits > li > img {
+  margin-right: 8px;
+}
+
+.pricing-cta{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 412px;
+  height: 48px;
+  margin: 70px auto 0;
+}
+
+.pricing-cta > .btn{
+  width: 200px;
+  height: 48px;
+  padding: 12px 42px;
+  font-size: 13px;
+  line-height: 12px;
+  border-radius: 100px;
+}
+
+.pricing-cta > .btn:first-of-type{
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  background: var(--pure-white);
+}
+
+  .btn:hover{
+    cursor: pointer;
+  }
