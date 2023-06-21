@@ -89,13 +89,12 @@ h1 {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  position: absolute;
-  top: 162px;
-  left: 246px;
+  position: relative;
+  top: 50px;
   gap: 32px;
   width: 948px;
   height: 389px;
-  /* margin: 0 auto; */
+  margin: 0 auto;
 }
 
 .intro-text {
@@ -146,10 +145,11 @@ h1 {
 
 /* linking */
 .group-2 {
-  position: absolute;
+  display: flex;
+  position: relative;
   width: 833px;
   height: 336.57px;
-  top: 607px;
+  top: 150px;
   left: 369px;
 }
 
@@ -182,13 +182,28 @@ h1 {
 
 /* group 3 */
 .group-3{
-  position: absolute;
-  top: 931px;
+  position: relative;
+  top: 100px;
   left: 0;
   max-width: 1440px;
   height: 93px;
 }
 
 .group-3 img{
+  position: absolute;
   width: 100%;
 }
+
+#ellipse{
+  width: 50%;
+  height: 49px;
+  margin: 20px auto 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+/* TODO: Remember to add the background pattern effect for the header/hero section */
+
+/* main cointainer */
+
