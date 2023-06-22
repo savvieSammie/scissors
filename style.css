@@ -541,18 +541,21 @@ h1 {
   cursor: pointer;
 }
 
-/* trim url section */
-.trim-url {
+/* trim url section/get-started */
+.trim-url,
+.get-started {
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   top: 250px;
+  width: 100vw;
   height: 523px;
   background: linear-gradient(180deg, #1e3448 99.99%, rgba(30, 52, 72, 0) 100%);
 }
 
-.trim-url > div{
+.trim-url > div,
+.get-started > div{
   position: absolute;
   width: 476px;
   height: 355px;
@@ -607,23 +610,28 @@ h1 {
   margin-top: 12px;
 }
 
-#trim-pattern-1{
+#trim-pattern-1,
+#get-started-patern-1,
+#footer-pattern-1{
   position: absolute;
   top: 0;
   left: 0;
   z-index: 1;
 }
 
-#trim-pattern-2{
+#trim-pattern-2,
+#get-started-patern-2,
+#footer-pattern-2{
   position: absolute;
   right: 0;
+  bottom: 0;
 }
 
-/* FAQ Section */
+/* ************** FAQ SECTION ************** */
 
 .faq{
   width: 100vw;
-  height: 955px;
+  height: 900px;
   position: relative;
   top: 300px;
   text-align: center;
@@ -686,4 +694,89 @@ h1 {
 #faq-pattern-2{
   top: 0;
   left: 0;
+}
+
+/* ************** GET STARTED SECTION ************** */
+
+.get-started{
+  top: 300px;
+  height: 299px;
+}
+
+.get-started > div{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: transparent;
+  height: 137px;
+}
+
+.get-started > div > h2{
+  color: var(--pure-white);
+  font-size: 30px;
+  line-height: 48px;
+}
+
+.get-started > div > .btn{
+  width: 200px;
+}
+
+/* ************** FOOTER SECTION ************** */
+
+footer{
+  width: 100%;
+  height: 561px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  top: 300px;
+  background: var(--pure-white);
+}
+
+footer > div:first-of-type{
+  width: 154px;
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+footer > div > #footer-logo{
+  display: flex;
+  align-items: flex-start;
+  padding: 8px;
+}
+
+#footer-icon-line{
+  padding: 0 4px;
+}
+
+#footer-name{
+  font-size: 24px;
+}
+
+.socials{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+/* ************** STYLING THE SCROLLBAR ************** */
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--shadow-color);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  background-color: var(--accent-color);
 }
