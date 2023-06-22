@@ -61,6 +61,10 @@ h1 {
   text-decoration: none;
 }
 
+a:hover{
+  text-decoration: 3px wavy red;
+}
+
 /* cta section */
 .cta {
   width: 211px;
@@ -539,6 +543,7 @@ h1 {
 
 .btn:hover {
   cursor: pointer;
+  animation: btn-hover 1s ease-in-out infinite;
 }
 
 /* trim url section/get-started */
@@ -611,8 +616,7 @@ h1 {
 }
 
 #trim-pattern-1,
-#get-started-patern-1,
-#footer-pattern-1{
+#get-started-patern-1{
   position: absolute;
   top: 0;
   left: 0;
@@ -728,15 +732,27 @@ footer{
   width: 100%;
   height: 561px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-around;
   position: relative;
   top: 300px;
+  padding: 95px 0 0 95px;
   background: var(--pure-white);
 }
 
+#footer-pattern-1{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+footer > div{
+  position: relative;
+  z-index: 1;
+}
+
 footer > div:first-of-type{
-  width: 154px;
+  width: fit-content;
   height: 96px;
   display: flex;
   align-items: center;
@@ -766,6 +782,54 @@ footer > div > #footer-logo{
 }
 
 
+/* ************** EXTRA INFO SECTION ************** */
+.extra-info{
+  width: 800px;
+  height: 384px;
+  display: grid;;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 24px;
+}
+
+.info-container{
+  padding: 12px 24px;
+  height: fit-content;
+}
+
+.info-container > h5{
+  padding-bottom: 8px;
+}
+
+.info-container > ul > li{
+  list-style: none;
+}
+
+.info-container > ul > li > a{
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.info-container > ul > li > a:hover{
+  text-decoration: underline;
+}
+
+#copyright{
+  position: absolute;
+  bottom: 50px;
+  right: 70px;
+}
+
+#copyright > a{
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 0 12px;
+  height: 20px;
+}
+
+#copyright > a:not(:last-child){
+  border-right: 1px solid var(--text-color);
+}
+
 /* ************** STYLING THE SCROLLBAR ************** */
 
 ::-webkit-scrollbar {
@@ -779,4 +843,19 @@ footer > div > #footer-logo{
 ::-webkit-scrollbar-thumb {
   border-radius: 50px;
   background-color: var(--accent-color);
+}
+
+/* ************** Animations ************** */
+@keyframes btn-hover{
+  0%{
+    transform: translateY(7px);
+  }
+
+  50%{
+    transform: translateY(-7px);
+  }
+
+  100%{
+    transform: translateY(7px);
+  }
 }
