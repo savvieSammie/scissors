@@ -894,6 +894,7 @@ footer > div > #footer-logo {
 
 #copyright > a:not(:last-child) {
   border-right: 1px solid var(--text-color);
+  font-family:  var(--medium);
 }
 
 /* ************** STYLING THE SCROLLBAR ************** */
