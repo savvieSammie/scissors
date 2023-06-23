@@ -28,7 +28,6 @@ body {
 .hide {
   opacity: 0;
   transform: translateY(30%);
-  /* transition: transform 1s ease-out; */
 }
 
 .show {
@@ -783,6 +782,7 @@ a:hover {
   justify-content: space-between;
   flex-direction: column;
   background-color: transparent;
+  padding: 0;
   height: 137px;
 }
 
