@@ -612,7 +612,8 @@ a:hover {
 .get-started > div {
   position: absolute;
   width: 476px;
-  height: 355px;
+  padding: 42px;
+  height: fit-content;
   border-radius: 12px;
   background-color: var(--pure-white);
   z-index: 2;
@@ -621,8 +622,7 @@ a:hover {
 .trim-url > div > form,
 .trim-url > div > div {
   width: 392px;
-  height: 127px;
-  margin: 42px 42px 0;
+  height: fit-content;
 }
 
 .trim-url > div > form{
@@ -630,7 +630,7 @@ a:hover {
 }
 
 .trim-url > div > div{
-  margin-top: 0g;
+  margin-top: 0px;
 }
 
 #domain,
@@ -649,7 +649,7 @@ a:hover {
 
 #domain,
 #imput-alias {
-  width: 48%;
+  width: 50%;
   margin-top: 24px;
 }
 
